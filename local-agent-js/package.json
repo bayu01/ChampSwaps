@@ -1,0 +1,46 @@
+{
+    "name": "champswaps-local-agent-js",
+    "version": "1.0.0",
+    "description": "a League of Legends event listener events",
+    "type": "module",
+    "main": "index.mjs",
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "scripts": {
+        "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+        "prepare": "cd .. && husky install local-agent-js/.husky"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bayu01/solid-train.git"
+    },
+    "keywords": [
+        "lcu",
+        "lol",
+        "riot-api"
+    ],
+    "author": "pedro jacques",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/bayu01/champswaps/issues"
+    },
+    "homepage": "https://github.com/bayu01/champswaps#readme",
+    "dependencies": {
+        "@types/node": "^18.14.1",
+        "bent": "^7.3.12",
+        "clipboardy": "^3.0.0",
+        "dotenv": "^16.0.3",
+        "league-connect": "^6.0.0-rc10",
+        "winston": "^3.8.2",
+        "winston-daily-rotate-file": "^4.7.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.4.0",
+        "cross-env": "^7.0.3",
+        "husky": "^8.0.3",
+        "jest": "^29.4.3",
+        "lint-staged": "^13.1.2",
+        "prettier": "2.8.4"
+    }
+}

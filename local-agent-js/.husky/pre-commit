@@ -1,0 +1,3 @@
+#!/bin/sh
+cd local-agent-js
+npx lint-staged
