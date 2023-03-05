@@ -16,6 +16,14 @@ A Rather naive approach to recommendation.
 
 Given some selected Champions (picked or in bench) and smaller number of summoners, It will prioritize a team of Summoners with No repetition of Champions and optimizing for a total Champion Mastery score in the team.
 
+## Usage
+
+`Ctrl + V` during Champion Selection to print out a suggestion of Summoner picks.
+
+![Screenshot 2023-03-05 160112](https://user-images.githubusercontent.com/6752227/222992441-670703c5-a840-4e7c-8808-9d3da1339b88.png)
+
+
+
 ## Contents
 
 `./local-agent-js/`
