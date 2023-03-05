@@ -3,10 +3,10 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/terraform/lambdas/recommender/node_modules" />
-      <excludeFolder url="file://$MODULE_DIR$/terraform/lambdas/.terraform/archive_files" />
-      <excludeFolder url="file://$MODULE_DIR$/terraform/.terraform/modules" />
       <excludeFolder url="file://$MODULE_DIR$/terraform/.terraform/providers" />
+      <excludeFolder url="file://$MODULE_DIR$/terraform/.terraform/modules" />
+      <excludeFolder url="file://$MODULE_DIR$/terraform/lambdas/.terraform/archive_files" />
+      <excludeFolder url="file://$MODULE_DIR$/terraform/lambdas/recommender/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
