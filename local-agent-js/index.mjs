@@ -135,7 +135,7 @@ ws.subscribe("/lol-champ-select/v1/session", async (data) => {
         const champInfo = Object.values(champions.data).find(
           (champInfo) => champInfo.key === championKey.toString()
         );
-        return `Recomendado:${champInfo.name} -> ${summonerName}`;
+        return `ChampSwaps:${champInfo.name} -> ${summonerName}`;
       }
     );
     console.log(recommendedChamps);
