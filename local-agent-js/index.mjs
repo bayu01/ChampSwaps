@@ -98,7 +98,11 @@ ws.subscribe("/lol-champ-select/v1/session", async (data) => {
 
   // QUERY LOCAL LCU ENDPOINTS FOR SUMMONER NAMES
   try {
-    if (!myTeamPuuids || myTeamPuuids?.[0]?.length < 1) {
+    if (
+      !myTeamPuuids ||
+      myTeamPuuids.length < 1 ||
+      myTeamPuuids[0].length < 1
+    ) {
       console.log(
         "First puuid was not a valid puuid: skip processing.",
         myTeamPuuids
@@ -135,12 +139,12 @@ ws.subscribe("/lol-champ-select/v1/session", async (data) => {
         const champInfo = Object.values(champions.data).find(
           (champInfo) => champInfo.key === championKey.toString()
         );
-        return `ChampSwaps:${champInfo.name} -> ${summonerName}`;
+        return `${champInfo.name}->${summonerName}`;
       }
     );
     console.log(recommendedChamps);
     cachedRecommended = recommendedChamps;
-    clipboard.writeSync(JSON.stringify(cachedRecommended));
+    clipboard.writeSync("ChampSwaps:\n" + cachedRecommended.join("\n"));
   } catch (error) {
     Error.captureStackTrace(error);
     console.log("Error during Recommender", error.stack);
