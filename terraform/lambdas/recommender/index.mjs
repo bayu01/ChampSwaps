@@ -73,7 +73,7 @@ export const handler = async (event) => {
    */
   if (recommenderMode === "simple") {
     recommended = availableChamps.map((championId) => {
-      const maxMastery = summonerMasteriesSet.flat().filter(masteries => masteries["championId"] === championId).reduce((max, current) => (max.championLevel * 100000 + max.championPoints) > (current.championLevel * 100000 + current.championPoints) ? max : current);
+      const maxMastery = summonerMasteriesSet.flat().filter(masteries => masteries["championId"] === championId).reduce((max, current) => (max.championLevel * 10000 + max.championPoints) > (current.championLevel * 10000 + current.championPoints) ? max : current);
       const summonerInfo = Object.values(cachedSummonersInfo).find(obj => obj.id === maxMastery.summonerId);
       console.log(`Champion ${championId} most experienced player is: `, summonerInfo.name);
       return {
@@ -91,7 +91,7 @@ export const handler = async (event) => {
       filteredSet.push(availableChamps.map((championId) => {
         const masteryObjForChamp = summonerMasteries.find( (masteryObj) => masteryObj.championId === championId)
         console.log("Applicable Summoner masteries are: ", masteryObjForChamp)
-        const championPoints = masteryObjForChamp ? (masteryObjForChamp.championLevel * 100000 + masteryObjForChamp.championPoints) : 0
+        const championPoints = masteryObjForChamp ? (masteryObjForChamp.championLevel * 10000 + masteryObjForChamp.championPoints) : 0
         const summonerId = masteryObjForChamp ? masteryObjForChamp.summonerId : "000000" /*value should never be picked when doing a Max score.*/
         return {
           championId,
